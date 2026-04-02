@@ -1,0 +1,18 @@
+name = "capstone_class_demo_v1"
+mission_class = "CAPSTONE-like cislunar pathfinder CubeSat"
+
+[mass]
+wet_mass_kg = 25.0
+dry_mass_kg = 18.0
+usable_propellant_kg = 5.0
+protected_reserve_kg = 2.0
+
+[propulsion]
+type = "micro_hall_sep"
+isp_seconds = 1500.0
+thruster_efficiency = 0.45
+
+[power]
+onboard_solar_power_w = 120.0
+beam_receiver_efficiency = 0.45
+propulsion_power_cap_w = 600.0

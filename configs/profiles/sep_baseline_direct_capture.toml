@@ -1,0 +1,12 @@
+name = "sep_baseline_direct_capture"
+description = "Control case with no external beam support."
+launch_lane = "gto_secondary"
+beam_architecture = "none"
+duration_days = 120.0
+
+[success]
+min_capture_duration_days = 3.0
+min_perilune_altitude_km = 100.0
+max_perilune_altitude_km = 1000.0
+max_capture_apoapsis_km = 30000.0
+min_final_mass_kg = 20.0
