@@ -4,7 +4,21 @@ version = "0.1.0"
 description = "Standalone CAPSTONE-class laser-augmented SEP study scaffold"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "jax>=0.9.2",
+    "numpy>=2.4.4",
+    "scipy>=1.17.1",
+    "spiceypy>=8.0.2",
+]
+
+[project.scripts]
+aether-study-jax = "aether_traj.sep_jax_cli:main"
+aether-study-lbfgs = "aether_traj.sep_lbfgs_cli:main"
+aether-study-de = "aether_traj.sep_de_cli:main"
+aether-study-pso = "aether_traj.sep_pso_cli:main"
+aether-experiment = "aether_traj.experiment_cli:main"
+aether-campaign = "aether_traj.campaign_cli:main"
+aether-worker = "aether_traj.worker_cli:main"
 
 [build-system]
 requires = ["hatchling"]

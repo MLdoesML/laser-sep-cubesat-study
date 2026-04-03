@@ -1,0 +1,27 @@
+campaign_id = "sep-baseline-autoresearch-v1"
+git_sha = "HEAD"
+physics_model_id = "analytic_sep_v1"
+design_space_id = "capstone_direct_capture_v1"
+objective_set_id = "direct_capture_first"
+workflows = ["sep_jax", "sep_lbfgs", "sep_de", "sep_pso"]
+profiles = [
+  "sep_baseline_direct_capture",
+  "laser_perigee_boost",
+  "laser_lunar_brake",
+  "laser_dual_window_fixed",
+]
+replicates = 1
+truth_budget = 4
+max_parallel = 2
+manager_program_path = "manager_program.md"
+mutation_knobs = ["bounds", "seed_priors", "optimizer_hyperparameters", "profile_allocation", "promotion_thresholds"]
+max_attempts = 2
+follow_on_children = 1
+
+[promotion_thresholds]
+top_k = 4
+max_constraint_violation = 6.0
+
+[workflow_run_profile_overrides.sep_jax]
+candidate_count = 14
+truth_candidate_count = 4

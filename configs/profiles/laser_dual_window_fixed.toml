@@ -1,0 +1,20 @@
+name = "laser_dual_window_fixed"
+description = "Fixed Earth-side and lunar-side beam stations used to validate the dual-window concept before full co-design."
+launch_lane = "gto_secondary"
+beam_architecture = "dual_window_fixed"
+duration_days = 120.0
+
+[beam_roles]
+perigee_boost = true
+lunar_brake = true
+
+[station_families]
+perigee_boost = ["geo"]
+lunar_brake = ["nrho"]
+
+[success]
+min_capture_duration_days = 3.0
+min_perilune_altitude_km = 100.0
+max_perilune_altitude_km = 1000.0
+max_capture_apoapsis_km = 30000.0
+min_final_mass_kg = 20.0
